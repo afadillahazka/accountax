@@ -4,35 +4,29 @@ import { Icon } from "astro-icon";
 
 const features = [
   {
-    title: "Sesuai dengan SAK EMKM",
+    title: "Dasar Penghitungan PPh Terutang",
     description:
       "Laporan keuangan UMKM disusun sesuai dengan SAK EMKM",
     icon: "bx:bxs-briefcase",
   },
   {
-    title: "Kalkulator Pajak",
+    title: "Persyaratan Pengajuan Pinjaman ke Bank",
     description:
       "Pelaku UMKM dapat mengetahui PPh terutang atas usahanya menggunakan kalkulator pajak",
     icon: "bx:bxs-window-alt",
   },
   {
-    title: "Mudah dan Cepat",
+    title: "Evaluasi dan Monitor Kegiatan Usaha",
     description:
       "Pelaku UMKM dapat melakukan pencatatan penjualan dan biaya operasional dengan mudah dan cepat.",
     icon: "bx:bxs-data",
-  },
-  {
-    title: "Di mana pun dan Kapan pun",
-    description:
-      "Pelaku UMKM dapat menyusun laporan keuangan di mana pun dan kapan pun dengan menggunakan handphone.",
-    icon: "bx:bxs-bot",
   }
 ];
 ---
 
-<div class="mt-0">
+<div class="mt-16">
   <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
-    Keunggulan Aplikasi
+    Manfaat Penyusunan Laporan Keuangan
   </h2>
   <!-- <p class="text-lg mt-4 text-slate-600">
     Astro comes batteries included. It takes the best parts of state-of-the-art
@@ -40,7 +34,7 @@ const features = [
   </p> -->
 </div>
 
-<div class="grid sm:grid-cols-2 md:grid-cols-2 mt-16 gap-8">
+<div class="grid sm:grid-cols-1 md:grid-cols-3 mt-16 gap-8">
   {
     features.map((item) => (
       <div class="flex gap-4 items-start">
