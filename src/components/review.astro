@@ -23,13 +23,13 @@ const review = [
         Apa Kata Mereka?
     </h2>
 </div>
-<div class="grid sm:grid-cols-1 md:grid-cols-1 mt-8 gap-4">
+<div class="grid sm:grid-cols-1 md:grid-cols-1 mt-4 lg:mt-8 gap-4">
     {
         review.map((review) => (
             <div class="flex gap-4 reviews-start">
                 <div class="m-4">
-                    <h2 class="text-lg text-justify">{review.text}</h2>
-                    <p class="font-bold text-slate-500 mt-2 leading-relaxed">
+                    <h2 class="text-base lg:text-xl text-justify italic">"{review.text}"</h2>
+                    <p class="font-bold text-lg text-slate-500 mt-2 leading-relaxed">
                         {review.name}
                     </p>
                     <p class="text-slate-500 mt-0 leading-relaxed">

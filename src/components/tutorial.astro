@@ -2,7 +2,7 @@
 // @ts-ignore
 import { Icon } from "astro-icon";
 
-const features = [
+const tutorial = [
   {
     title: "Sesuai dengan SAK EMKM",
     description:
@@ -30,25 +30,21 @@ const features = [
 ];
 ---
 
-<div class="mt-0">
-  <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
-    Keunggulan Aplikasi
+<div class="mt-8">
+  <h2 class="text-2xl lg:text-4xl font-bold lg:tracking-tight">
+    Mengunduh Aplikasi
   </h2>
-  <!-- <p class="text-lg mt-4 text-slate-600">
-    Astro comes batteries included. It takes the best parts of state-of-the-art
-    tools and adds its own innovations.
-  </p> -->
 </div>
 
-<div class="grid sm:grid-cols-2 md:grid-cols-2 mt-8 mb-16 gap-8">
+<div class="grid sm:grid-cols-2 md:grid-cols-2 mt-8 gap-8">
   {
-    features.map((item) => (
+    tutorial.map((item) => (
       <div class="flex gap-4 items-start">
         <div class="mt-1 bg-black rounded-full  p-2 w-8 h-8 shrink-0">
           <Icon class="text-white" name={item.icon} />
         </div>
         <div>
-          <h2 class="font-semibold text-3xl">{item.title}</h2>{" "}
+          <h2 class="font-semibold text-xl">{item.title}</h2>{" "}
           <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
         </div>
       </div>

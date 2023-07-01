@@ -1,0 +1,18 @@
+---
+import Container from "@components/container.astro";
+import Sectionhead from "@components/sectionhead.astro";
+import Layout from "@layouts/Layout.astro";
+import Tutorial from "@components/tutorial.astro"
+---
+
+<Layout title="Panduan">
+    <Container>
+        <Sectionhead>
+            <Fragment slot="title">Panduan</Fragment>
+            <Fragment slot="desc"></Fragment>
+          </Sectionhead>
+    </Container>
+    <Container>
+        <Tutorial />
+    </Container>
+</Layout>
