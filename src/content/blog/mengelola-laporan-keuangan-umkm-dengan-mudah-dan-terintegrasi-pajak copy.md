@@ -7,7 +7,7 @@ image: {
     alt: "full stack web development"
 }
 publishDate: "2023-06-22 11:39"
-category: ""
+category: "tips"
 author: "Nurul Aisyah"
 tags: [laporankeuangan, umkm, pajak, aplikasi]
 ---

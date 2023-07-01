@@ -8,13 +8,13 @@ import Contactform from "@components/contactform.astro";
 ---
 
 <Layout title="Contact">
+  <Sectionhead>
+    <Fragment slot="title">Hubungi Kami</Fragment>
+    <Fragment slot="desc">Tuliskan pertanyaanmu di kotak pesan di bawah, atau hubungi kami di kontak berikut</Fragment>
+  </Sectionhead>
   <Container>
-    <Sectionhead>
-      <Fragment slot="title">Hubungi Kami</Fragment>
-      <Fragment slot="desc"> </Fragment>
-    </Sectionhead>
 
-    <div class="grid md:grid-cols-2 gap-10 mx-auto max-w-4xl mt-16">
+    <div class="grid md:grid-cols-2 gap-10 mx-auto max-w-4xl mt-8">
       <div>
         <h2 class="font-medium text-2xl text-gray-800">Hubungi AccounTax</h2>
         <p class="text-lg leading-relaxed text-slate-500 mt-3">
