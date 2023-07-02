@@ -4,69 +4,208 @@ import { Icon } from "astro-icon";
 
 const tutorial = [
   {
-    title: "Sesuai dengan SAK EMKM",
-    description:
-      "Laporan keuangan UMKM disusun sesuai dengan SAK EMKM",
-    icon: "bx:bxs-briefcase",
+    title: "Registrasi Akun",
+    video: "https://www.youtube.com/embed/e0AO2-oA31U",
+    id: "#Registrasi-Akun",
+    id2: "Registrasi-Akun",
   },
   {
-    title: "Kalkulator Pajak",
-    description:
-      "Pelaku UMKM dapat mengetahui PPh terutang atas usahanya menggunakan kalkulator pajak",
-    icon: "bx:bxs-window-alt",
+    title: "Beranda Aplikasi AccounTax",
+    video: "https://www.youtube.com/embed/V_kO2xOiQB4",
+    id: "#Beranda-Aplikasi-AccounTax",
+    id2: "Beranda-Aplikasi-AccounTax",
   },
   {
-    title: "Mudah dan Cepat",
-    description:
-      "Pelaku UMKM dapat melakukan pencatatan penjualan dan biaya operasional dengan mudah dan cepat.",
-    icon: "bx:bxs-data",
+    title: "Menginput ke Master Data",
+    video: "https://www.youtube.com/embed/pKaykk4ZRuk",
+    id: "#Menginput-ke-Master-Data",
+    id2: "Menginput-ke-Master-Data",
   },
   {
-    title: "Di mana pun dan Kapan pun",
-    description:
-      "Pelaku UMKM dapat menyusun laporan keuangan di mana pun dan kapan pun dengan menggunakan handphone.",
-    icon: "bx:bxs-bot",
-  }
+    title: "Menginput Pembelian Barang Dagang Tunai",
+    video: "https://www.youtube.com/embed/EVBmg_5xoCE",
+    id: "#Menginput-Pembelian-Barang-Dagang-Tunai",
+    id2: "Menginput-Pembelian-Barang-Dagang-Tunai",
+  },
+  {
+    title: "Menginput Pembelian Barang Dagang Kredit",
+    video: "https://www.youtube.com/embed/TVJ2RZBZboA",
+    id: "#Menginput-Pembelian-Barang-Dagang-Kredit",
+    id2: "Menginput-Pembelian-Barang-Dagang-Kredit",
+  },
+  {
+    title: "Menginput Pembelian Peralatan Tunai",
+    video: "https://www.youtube.com/embed/kHlFrAlMJ1Q",
+    id: "#Menginput-Pembelian-Peralatan-Tunai",
+    id2: "Menginput-Pembelian-Peralatan-Tunai",
+  },
+  {
+    title: "Menginput Pembelian Peralatan Kredit",
+    video: "https://www.youtube.com/embed/E3AKpEY27EQ",
+    id: "#Menginput-Pembelian-Peralatan-Kredit",
+    id2: "Menginput-Pembelian-Peralatan-Kredit",
+  },
+  {
+    title: "Menginput Pembelian Perlengkapan Tunai",
+    video: "https://www.youtube.com/embed/nIbcIbJ-ZWo",
+    id: "#Menginput-Pembelian-Perlengkapan-Tunai",
+    id2: "Menginput-Pembelian-Perlengkapan-Tunai",
+  },
+  {
+    title: "Menginput Pembelian Perlengkapan Kredit",
+    video: "https://www.youtube.com/embed/fqjx_GYScME",
+    id: "#Menginput-Pembelian-Perlengkapan-Kredit",
+    id2: "Menginput-Pembelian-Perlengkapan-Kredit",
+  },
+  {
+    title: "Menginput Penjualan Barang Dagang Tunai",
+    video: "https://www.youtube.com/embed/LqinxyQDQoc",
+    id: "#Menginput-Penjualan-Barang-Dagang-Tunai",
+    id2: "Menginput-Penjualan-Barang-Dagang-Tunai",
+  },
+  {
+    title: "Menginput Penjualan Barang Dagang Kredit",
+    video: "https://www.youtube.com/embed/4KToLRMdC0M",
+    id: "#Menginput-Penjualan-Barang-Dagang-Kredit",
+    id2: "Menginput-Penjualan-Barang-Dagang-Kredit",
+  },
+  {
+    title: "Menginput Transaksi Penerimaan Kas",
+    video: "https://www.youtube.com/embed/ilTpgG5Jiho",
+    id: "#Menginput-Transaksi-Penerimaan-Kas",
+    id2: "Menginput-Transaksi-Penerimaan-Kas",
+  },
+  {
+    title: "Menginput Transaksi Pengeluaran Kas",
+    video: "https://www.youtube.com/embed/m0aoawNj2Q8",
+    id: "#Menginput-Transaksi-Pengeluaran-Kas",
+    id2: "Menginput-Transaksi-Pengeluaran-Kas",
+  },
+  {
+    title: "Menyajikan Laporan Keuangan",
+    video: "https://www.youtube.com/embed/OA8Z9BOFmTE",
+    id: "#Menyajikan-Laporan-Keuangan",
+    id2: "Menyajikan-Laporan-Keuangan",
+  },
+  {
+    title: "Menyajikan Laporan Utang Piutang",
+    video: "https://www.youtube.com/embed/etBrGBiUr2o",
+    id: "#Menyajikan-Laporan-Utang-Piutang",
+    id2: "Menyajikan-Laporan-Utang-Piutang",
+  },
+  {
+    title: "Menyajikan Laporan Perpajakan",
+    video: "https://www.youtube.com/embed/fxLrq-rML3o",
+    id: "#Menyajikan-Laporan-Perpajakan",
+    id2: "Menyajikan-Laporan-Perpajakan",
+  },
 ];
 ---
 
 <div class="mt-8">
-  <h2 class="text-2xl lg:text-4xl font-bold lg:tracking-tight">
+  <h2 class="text-2xl lg:text-4xl font-bold lg:tracking-tight">Indeks</h2>
+  <p class="text-lg lg:text-xl lg:tracking-tight">Klik tutorial yang Anda inginkan</p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 items-center justify-center mt-8 gap-4 lg:gap-8 mx-2 my-2 text-left">
+  <a class="underline decoration-inherit" href="#Mengunduh-Aplikasi">Mengunduh Aplikasi</a>
+  {
+    tutorial.map((step) => (
+        <a class="underline decoration-inherit" href={step.id}>{step.title}</a>
+    ))
+  }
+</div>
+
+<div class="mt-8">
+  <h2 class="text-2xl lg:text-4xl font-bold lg:tracking-tight anchor" id="Mengunduh-Aplikasi">
     Mengunduh Aplikasi
   </h2>
 </div>
 
 <div class="grid grid-cols-1 mt-8 gap-8 mx-8">
   <ol class="list-decimal text-base lg:text-xl">
-    <li>Buka Google Play Store: Pastikan perangkat Android Anda terhubung ke internet, lalu buka Google Play Store. Aplikasi ini biasanya sudah terpasang di perangkat Android secara default.</li>
-    <li>Cari aplikasi AccounTax: Pada halaman utama Google Play Store, Anda akan melihat kotak pencarian di bagian atas. Ketik "AccounTax" di kotak pencarian dan tekan tombol "Cari" atau ikon kaca pembesar pada keyboard.</li>
-    <li>Pilih aplikasi AccounTax: Setelah Anda melakukan pencarian, Google Play Store akan menampilkan beberapa hasil. Cari aplikasi AccounTax yang tepat dan pastikan itu adalah aplikasi yang diinginkan. Anda dapat melihat ikon aplikasi, nama pengembang, peringkat ulasan, dan deskripsi singkat.</li>
-    <li>Baca deskripsi dan ulasan: Sebelum mengunduh aplikasi, sangat penting untuk membaca deskripsi aplikasi dan ulasan pengguna. Deskripsi akan memberikan informasi tentang fitur-fitur utama aplikasi dan apa yang dapat Anda harapkan setelah mengunduhnya. Ulasan pengguna akan memberikan wawasan tentang pengalaman pengguna lain dengan aplikasi tersebut.</li>
-    <li>Ketuk tombol "Instal": Jika Anda yakin ingin mengunduh aplikasi AccounTax, ketuk tombol "Instal" yang biasanya terletak di bawah ikon aplikasi dan deskripsi. Tombol ini akan berubah menjadi "Instal" atau menunjukkan harga jika aplikasi berbayar.</li>
-    <li>Izinkan akses yang diperlukan: Setelah Anda mengetuk tombol "Instal", Google Play Store akan meminta akses ke beberapa fungsi atau informasi pada perangkat Anda. Ini termasuk izin seperti akses ke jaringan, lokasi, kontak, dll. Baca dengan seksama izin-izin ini dan ketuk "Terima" atau "Izinkan" jika Anda setuju.</li>
-    <li>Tunggu proses unduhan: Setelah Anda menyetujui izin-izin yang diminta, Google Play Store akan mulai mengunduh aplikasi AccounTax ke perangkat Anda. Tunggu sampai proses unduhan selesai. Lamanya waktu ini akan bervariasi tergantung pada ukuran aplikasi dan kecepatan koneksi internet Anda.</li>
-    <li>Buka aplikasi AccounTax: Setelah unduhan selesai, Anda akan melihat tombol "Buka" di tempat tombol "Instal". Ketuk tombol "Buka" untuk menjalankan aplikasi AccounTax. Jika Anda ingin membuka aplikasi di lain waktu, Anda dapat menemukannya di layar beranda atau melalui menu aplikasi di perangkat Anda.</li>
+    <li>
+      Buka Google Play Store: Pastikan perangkat Android Anda terhubung ke
+      internet, lalu buka Google Play Store. Aplikasi ini biasanya sudah
+      terpasang di perangkat Android secara default.
+    </li>
+    <li>
+      Cari aplikasi AccounTax: Pada halaman utama Google Play Store, Anda akan
+      melihat kotak pencarian di bagian atas. Ketik "AccounTax" di kotak
+      pencarian dan tekan tombol "Cari" atau ikon kaca pembesar pada keyboard.
+    </li>
+    <li>
+      Pilih aplikasi AccounTax: Setelah Anda melakukan pencarian, Google Play
+      Store akan menampilkan beberapa hasil. Cari aplikasi AccounTax yang tepat
+      dan pastikan itu adalah aplikasi yang diinginkan. Anda dapat melihat ikon
+      aplikasi, nama pengembang, peringkat ulasan, dan deskripsi singkat.
+    </li>
+    <li>
+      Baca deskripsi dan ulasan: Sebelum mengunduh aplikasi, sangat penting
+      untuk membaca deskripsi aplikasi dan ulasan pengguna. Deskripsi akan
+      memberikan informasi tentang fitur-fitur utama aplikasi dan apa yang dapat
+      Anda harapkan setelah mengunduhnya. Ulasan pengguna akan memberikan
+      wawasan tentang pengalaman pengguna lain dengan aplikasi tersebut.
+    </li>
+    <li>
+      Ketuk tombol "Instal": Jika Anda yakin ingin mengunduh aplikasi AccounTax,
+      ketuk tombol "Instal" yang biasanya terletak di bawah ikon aplikasi dan
+      deskripsi. Tombol ini akan berubah menjadi "Instal" atau menunjukkan harga
+      jika aplikasi berbayar.
+    </li>
+    <li>
+      Izinkan akses yang diperlukan: Setelah Anda mengetuk tombol "Instal",
+      Google Play Store akan meminta akses ke beberapa fungsi atau informasi
+      pada perangkat Anda. Ini termasuk izin seperti akses ke jaringan, lokasi,
+      kontak, dll. Baca dengan seksama izin-izin ini dan ketuk "Terima" atau
+      "Izinkan" jika Anda setuju.
+    </li>
+    <li>
+      Tunggu proses unduhan: Setelah Anda menyetujui izin-izin yang diminta,
+      Google Play Store akan mulai mengunduh aplikasi AccounTax ke perangkat
+      Anda. Tunggu sampai proses unduhan selesai. Lamanya waktu ini akan
+      bervariasi tergantung pada ukuran aplikasi dan kecepatan koneksi internet
+      Anda.
+    </li>
+    <li>
+      Buka aplikasi AccounTax: Setelah unduhan selesai, Anda akan melihat tombol
+      "Buka" di tempat tombol "Instal". Ketuk tombol "Buka" untuk menjalankan
+      aplikasi AccounTax. Jika Anda ingin membuka aplikasi di lain waktu, Anda
+      dapat menemukannya di layar beranda atau melalui menu aplikasi di
+      perangkat Anda.
+    </li>
     <!-- ... -->
   </ol>
 </div>
-
-<div class="mt-8">
-  <h2 class="text-2xl lg:text-4xl font-bold lg:tracking-tight">
-    Mengunduh Aplikasi
-  </h2>
-</div>
-<div class="grid sm:grid-cols-2 md:grid-cols-2 mt-8 gap-8">
+<div class="mb-16">
   {
-    tutorial.map((item) => (
-      <div class="flex gap-4 items-start">
-        <div class="mt-1 bg-black rounded-full  p-2 w-8 h-8 shrink-0">
-          <Icon class="text-white" name={item.icon} />
+    tutorial.map((step) => (
+      <>
+        <div class="mt-16 mb-8">
+          <h2
+            class="text-2xl lg:text-4xl font-bold lg:tracking-tight anchor"
+            id={step.id2}>
+            {step.title}
+          </h2>
         </div>
-        <div>
-          <h2 class="font-semibold text-xl">{item.title}</h2>{" "}
-          <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
+        <div class="flex justify-center items-center mt-8 gap-8">
+          <iframe
+            width="720"
+            height="480"
+            src={step.video}
+            title={step.title}
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+            loading="lazy"
+          />
         </div>
-      </div>
+      </>
     ))
   }
+  <style>
+    .anchor {
+      padding-top: 100pt; 
+      margin-top: -100pt
+    }
+  </style>
 </div>
