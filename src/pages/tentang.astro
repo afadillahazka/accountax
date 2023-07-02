@@ -1,0 +1,83 @@
+---
+import { getCollection } from "astro:content";
+import { Picture } from "@astrojs/image/components";
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/container.astro";
+import Sectionhead from "@components/sectionhead.astro";
+
+// Filter team entries with 'draft: false' & date before current date
+const publishedTeamMembers = await getCollection("team", ({ data }) => {
+  return !data.draft && data.publishDate < new Date();
+});
+---
+
+<Layout title="Tentang">
+  <Sectionhead>
+    <Fragment slot="title">Tentang</Fragment>
+    <Fragment slot="desc">Kenal kami lebih dekat lagi</Fragment>
+  </Sectionhead>
+  <Container>
+
+    <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-8 mb-8">
+      <h2 class="font-bold text-3xl text-gray-800">
+        Apa itu AccounTax?
+      </h2>
+      <p class="text-lg leading-relaxed text-slate-500">
+        AccounTax merupakan platform penyusunan laporan keuangan untuk Usaha Mikro, Kecil, dan Menengah (UMKM) yang di dalamnya terdapat kalkulator penghitungan Pajak Penghasilan (PPh). 
+      </p>
+      <p class="text-lg leading-relaxed text-slate-500">
+        Pelaku UMKM dapat mencatat transaksi penjualan, pembelian, penerimaan kas, dan pengeluaran kas dengan rapi. AccounTax dirancang berdasarkan Standar Akuntansi Keuangan Entitas Mikro, Kecil, dan Menengah (SAK EMKM). Dengan menggunakan aplikasi ini, pelaku UMKM dapat menyusun Laporan Laba Rugi dan Laporan Posisi Keuangan sesuai dengan standar yang berlaku. Selain itu, pelaku UMKM juga dapat menghitung PPh terutangnya menggunakan kalkulator pajak, setelah menyusun laporan keuangan.
+      </p>
+    </div>
+    <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-8 mb-8">
+      <h2 class="font-bold text-3xl text-gray-800">
+        Kegiatan Kami
+      </h2>
+      <p class="text-lg leading-relaxed text-slate-500">
+        Pada kegiatan sosialisasi bertujuan untuk memberikan pemahaman yang mendalam kepada peserta tentang bagaimana aplikasi Accountax dapat membantu dalam mengotomatisasi proses akuntansi dan pelaporan keuangan. Kami berusaha menjelaskan secara rinci tentang fitur-fitur kunci aplikasi, seperti pengelolaan transaksi, pencatatan pembayaran, pembuatan laporan keuangan, dan pelacakan pengeluaran
+      </p>
+      <p class="text-lg leading-relaxed text-slate-500">
+        Selama acara sosialisasi, kami juga menyediakan sesi tanya jawab interaktif untuk memastikan peserta memahami dengan baik setiap aspek aplikasi Accountax. Para peserta diberi kesempatan untuk mengajukan pertanyaan, berbagi pengalaman, dan mendiskusikan tantangan yang mereka hadapi dalam mengelola keuangan perusahaan mereka.
+      </p>
+      <p class="text-lg leading-relaxed text-slate-500">
+        Selama acara sosialisasi, kami juga menyediakan sesi tanya jawab interaktif untuk memastikan peserta memahami dengan baik setiap aspek aplikasi Accountax. Para peserta diberi kesempatan untuk mengajukan pertanyaan, berbagi pengalaman, dan mendiskusikan tantangan yang mereka hadapi dalam mengelola keuangan perusahaan mereka.
+      </p>
+      <p class="text-lg leading-relaxed text-slate-500">
+        Selain itu, kami juga menyajikan contoh kasus dan studi kasus nyata untuk memberikan gambaran praktis tentang penggunaan aplikasi Accountax dalam situasi bisnis yang berbeda. Kami berharap dengan menyajikan contoh-contoh ini, peserta dapat melihat secara langsung bagaimana aplikasi ini dapat diterapkan dalam skenario keuangan mereka sendiri.
+      </p>
+      <p class="text-lg leading-relaxed text-slate-500">
+        Kami juga memberikan panduan praktis tentang penggunaan aplikasi Accountax, termasuk langkah-langkah instalasi, pengaturan awal, dan pemecahan masalah umum yang mungkin dihadapi oleh pengguna. Kami ingin memastikan bahwa setiap peserta merasa percaya diri dalam menggunakan aplikasi ini setelah acara sosialisasi.
+      </p>
+    </div>
+    <!-- <div class="grid md:grid-cols-3 gap-10 mx-auto max-w-4xl mt-12 ">
+      {
+        publishedTeamMembers.map((teamMemberEntry) => (
+          <div class="group">
+            <div class="w-full aspect-square">
+              <Picture
+                src={teamMemberEntry.data.avatar.src}
+                alt={teamMemberEntry.data.avatar.alt}
+                sizes="(max-width: 800px) 100vw, 400px"
+                widths={[200, 400]}
+                aspectRatio="1:1"
+                background="#ffffff"
+                fit="cover"
+                position="center"
+                class="w-full rounded-md rounded transition group-hover:-translate-y-1 group-hover:shadow-xl"
+              />
+            </div>
+
+            <div class="mt-4 text-center">
+              <h2 class="text-lg text-gray-800">
+                {teamMemberEntry.data.name}
+              </h2>
+              <h3 class="text-sm text-slate-500">
+                {teamMemberEntry.data.title}
+              </h3>
+            </div>
+          </div>
+        ))
+      }
+    </div> -->
+  </Container>
+</Layout>

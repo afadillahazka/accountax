@@ -9,6 +9,8 @@ module.exports = {
       toscalight_2: "#54c0a9",
       red: "#FF312E",
       orange: "#fbc70d",
+      "orange-2": "#FFDB2C",
+      darkblue: "#262161", 
       white: "rgb(255 255 255)",
       black: "rgb(0, 0, 0)",
       gray: "#E1E1E1",

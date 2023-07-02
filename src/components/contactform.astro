@@ -10,7 +10,7 @@ import Button from "./ui/button.astro";
   id="form"
   class="needs-validation"
   novalidate>
-  <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE" />
+  <input type="hidden" name="access_key" value="749c8566-80e7-4cbe-9211-4691d0d9d4f5" />
   <!-- Create your free access key from https://web3forms.com/ -->
   <input type="checkbox" class="hidden" style="display:none" name="botcheck" />
   <div class="mb-5">
@@ -91,7 +91,7 @@ import Button from "./ui/button.astro";
     const object = Object.fromEntries(formData);
     const json = JSON.stringify(object);
 
-    result.innerHTML = "Sending...";
+    result.innerHTML = "Mengirim...";
 
     fetch("https://api.web3forms.com/submit", {
       method: "POST",
@@ -105,7 +105,7 @@ import Button from "./ui/button.astro";
         let json = await response.json();
         if (response.status == 200) {
           result.classList.add("text-green-500");
-          result.innerHTML = json.message;
+          result.innerHTML = "Pesan terkirim.";
         } else {
           console.log(response);
           result.classList.add("text-red-500");
@@ -114,7 +114,7 @@ import Button from "./ui/button.astro";
       })
       .catch((error) => {
         console.log(error);
-        result.innerHTML = "Something went wrong!";
+        result.innerHTML = "Ada yang salah!";
       })
       .then(function () {
         form.reset();

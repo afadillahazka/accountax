@@ -1,6 +1,7 @@
 ---
 import { Picture } from "@astrojs/image/components";
 import heroImage from "assets/logo.png";
+import googleplayImage from "assets/google-play-badge.png"
 import Link from "@components/ui/link.astro";
 import { Icon } from "astro-icon";
 ---
@@ -15,16 +16,21 @@ import { Icon } from "astro-icon";
     <p class="text-xl lg:text-3xl mt-4 text-slate-600 max-w-xl">
       <span class="font-bold">AccounTax</span> merupakan platform penyusunan laporan keuangan untuk Usaha Mikro, Kecil, dan Menengah (UMKM) yang di dalamnya terdapat kalkulator penghitungan Pajak Penghasilan (PPh). 
     </p>
-    <div class="mt-6 flex flex-col sm:flex-row gap-3">
-      <Link
+    <div class="mt-3 flex flex-col sm:flex-row gap-3">
+      <a
         href="https://play.google.com/store/apps/details?id=io.kodular.cahprdj2.accountax_new"
         target="_blank"
-        class="flex gap-1 items-center justify-center"
+        class="flex gap-1 items-start px-0 justify-start lg:justify-center bg-auto border-0"
         rel="noopener">
-        <Icon class="text-white w-5 h-5" name="bx:bxs-cloud-download" />
-
-        Dapatkan di Google Play Store
-      </Link>
+        <Picture
+        src={googleplayImage}
+        alt="Google Play"
+        widths={[200, 400, 600]}
+        sizes="(max-width: 200px) 100vw, 180px"
+        loading="eager"
+        format="avif"
+      />
+    </a>
     </div>
   </div>
   <div class="py-6 order-1 md:order-1 md:block">

@@ -1,8 +1,10 @@
 ---
-import Container from "@components/container.astro";
+import Container from "@components/navbarcontainer.astro";
 import Link from "@components/ui/link.astro";
 import Dropdown from "./dropdown.astro";
 import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
+import { Picture } from "@astrojs/image/components";
+import logoText from "assets/logotext.png"
 
 const menuitems = [
   // {
@@ -21,7 +23,7 @@ const menuitems = [
   },
   {
     title: "Tentang",
-    path: "/about",
+    path: "/tentang",
   },
   {
     title: "Blog",
@@ -36,21 +38,33 @@ const menuitems = [
     path: "/contact",
   },
 ];
+
 ---
 
-<Container class="sticky top-0 z-50 bg-white">
-  <header class=" flex flex-col lg:flex-row justify-between items-center my-5">
+<Container class="sticky top-0 z-50 bg-darkblue">
+  <header class=" flex flex-col lg:flex-row justify-between items-center my-2">
     <Astronav>
       <div class="flex w-full lg:w-auto items-center justify-between">
-        <a href="/" class="text-3xl"
-          ><span class="font-bold text-slate-800 font-bravia">AccounTax</span>
-        </a>
+        <a
+        href="http://localhost:3000/"
+        target="_self"
+        class="flex gap-1 items-start px-0 justify-start bg-auto lg:justify-center border-0"
+        rel="noreferrer">
+          <Picture
+          src={logoText}
+          alt="AccounTax Logo"
+          widths={[200, 400, 600]}
+          sizes="(max-width: 200px) 100vw, 180px"
+          loading="eager"
+          format="avif"
+        />
+      </a>
         <div class="block lg:hidden">
-          <MenuIcon class="w-4 h-4 text-gray-800" />
+          <MenuIcon class="w-4 h-4 text-white" />
         </div>
       </div>
       <MenuItems class="hidden w-full lg:w-auto mt-2 lg:flex lg:mt-0">
-        <ul class="flex flex-col lg:flex-row lg:gap-3 text-lg">
+        <ul class="flex flex-col lg:flex-row lg:gap-3 text-lg text-white">
           {
             menuitems.map((item, index) => (
               <>
@@ -66,7 +80,7 @@ const menuitems = [
                   <li>
                     <a
                       href={item.path}
-                      class="flex lg:px-3  py-2 text-gray-600 hover:font-semibold">
+                      class="flex lg:px-3 py-2 text-gray-600 hover:font-semibold">
                       {item.title}
                     </a>
                   </li>
@@ -89,3 +103,4 @@ const menuitems = [
     </div> -->
   </header>
 </Container>
+
