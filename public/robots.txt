@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: http://accountax.id/sitemap-index.xml
+Sitemap: https://accountax.id/sitemap-index.xml
