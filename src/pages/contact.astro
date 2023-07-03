@@ -6,28 +6,48 @@ import Sectionhead from "@components/sectionhead.astro";
 import Button from "@components/ui/button.astro";
 import Contactform from "@components/contactform.astro";
 ---
-
+<script src="https://kit.fontawesome.com/36090d8799.js" crossorigin="anonymous"></script>
 <Layout title="Contact">
   <Sectionhead>
     <Fragment slot="title">Hubungi Kami</Fragment>
-    <Fragment slot="desc">Tuliskan pertanyaanmu di kotak pesan di bawah, atau hubungi kami di kontak berikut</Fragment>
+    <Fragment slot="desc">
+      Tuliskan pertanyaanmu di kotak pesan di bawah, atau hubungi kami di kontak
+      berikut
+    </Fragment>
   </Sectionhead>
   <Container>
-
     <div class="grid md:grid-cols-2 gap-10 mx-auto max-w-4xl mt-8 mb-8">
       <div>
         <p class="text-lg leading-relaxed text-slate-500 mt-0">
-          Ada yang ingin dikatakan? Kami di sini untuk membantu. Isi formulir atau kirim email.
+          Ada yang ingin dikatakan? Kami di sini untuk membantu. Isi formulir
+          atau kirim email.
         </p>
         <div class="mt-5">
-          <div class="flex items-center mt-2 space-x-2 text-gray-600">
-            <Icon class="text-gray-400 w-4 h-4" name="uil:map-marker" />
-            <span>Universitas Trilogi, Jakarta Selatan</span>
-          </div><div class="flex items-center mt-2 space-x-2 text-gray-600">
-            <Icon class="text-gray-400 w-4 h-4" name="uil:envelope" /><a
-              href="mailto:nurulaisyah@trilogi.ac.id"
-              >nurulaisyah@trilogi.ac.id</a
-            >
+          <div class="flex gap-2 items-center mt-2 space-x-2 text-gray-600">
+            <i class="text-gray-400 w-4 h-4 fa-brands fa-youtube"/><a
+              href="https://www.youtube.com/@nurulaisyahrachmawati9445"
+              >AccounTax Official
+            </a>
+          </div>
+          <div class="flex gap-2 items-center mt-2 space-x-2 text-gray-600">
+            <i class="text-gray-400 text-center w-4 h-4 fa-brands fa-instagram"/><a
+              href="https://www.instagram.com/accountax.official"
+              >@accountax.official
+            </a>
+          </div>
+          <div class="flex gap-2 items-center mt-2 space-x-2 text-gray-600">
+            <i class="fa-regular fa-envelope" style="color: #000000;"/>
+            <a
+              href="mailto:actx.apps@gmail.com"
+              >actx.apps@gmail.com
+            </a>
+          </div>
+          <div class="flex gap-2 items-center mt-2 space-x-2 text-gray-600">
+            <Icon class="text-gray-400 w-4 h-4" name="uil:globe" />
+            <a
+              href="https://www.accountax.id/"
+              >accountax.id
+            </a>
           </div>
         </div>
       </div>
