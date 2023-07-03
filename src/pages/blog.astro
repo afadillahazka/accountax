@@ -23,9 +23,9 @@ publishedBlogEntries.sort(function (a, b) {
       Berisi tentang tips dan trik seputar keuangan
     </Fragment>
   </Sectionhead>
-  <Container>
+  <Container class="bg-pattern-2 bg-cover bg-norepeat bg-center">
     <main class="mt-16 mb-16">
-      <ul class="grid gap-16 mx-auto grid-cols-auto sm:grid-cols-2">
+      <ul class="grid gap-16 mx-auto grid-cols-auto sm:grid-cols-2 lg:grid-cols-3">
         {
           publishedBlogEntries.map((blogPostEntry, index) => (
             <li>
@@ -49,17 +49,17 @@ publishedBlogEntries.sort(function (a, b) {
                       {blogPostEntry.data.category}
                     </span>
 
-                    <h2 class="text-3xl font-semibold leading-snug tracking-tight mt-1 ">
+                    <h2 class="text-2xl lg:text-3xl font-semibold leading-snug tracking-tight mt-1 ">
                       {blogPostEntry.data.title}
                     </h2>
 
                     <div class="flex gap-2 mt-3">
-                      <span class="text-gray-400">
+                      <span class="text-base text-gray-400">
                         {blogPostEntry.data.author}
                       </span>
                       <span class="text-gray-400">• </span>
                       <time
-                        class="text-gray-400"
+                        class="text-base text-gray-400"
                         datetime={blogPostEntry.data.publishDate.toISOString()}>
                         {blogPostEntry.data.publishDate.toDateString()}
                       </time>

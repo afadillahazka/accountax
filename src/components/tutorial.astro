@@ -104,19 +104,28 @@ const tutorial = [
 
 <div class="mt-8">
   <h2 class="text-2xl lg:text-4xl font-bold lg:tracking-tight">Indeks</h2>
-  <p class="text-lg lg:text-xl lg:tracking-tight">Klik tutorial yang Anda inginkan</p>
+  <p class="text-lg lg:text-xl lg:tracking-tight">
+    Klik tutorial yang Anda inginkan
+  </p>
 </div>
-<div class="grid grid-cols-1 lg:grid-cols-3 items-center justify-center mt-8 gap-4 lg:gap-8 mx-2 my-2 text-left">
-  <a class="underline decoration-inherit" href="#Mengunduh-Aplikasi">Mengunduh Aplikasi</a>
+<div
+  class="grid grid-cols-1 lg:grid-cols-3 items-center justify-center mt-8 gap-4 lg:gap-8 mx-2 my-2 text-left">
+  <a class="underline decoration-inherit" href="#Mengunduh-Aplikasi"
+    >Mengunduh Aplikasi</a
+  >
   {
     tutorial.map((step) => (
-        <a class="underline decoration-inherit" href={step.id}>{step.title}</a>
+      <a class="underline decoration-inherit" href={step.id}>
+        {step.title}
+      </a>
     ))
   }
 </div>
 
 <div class="mt-8">
-  <h2 class="text-2xl lg:text-4xl font-bold lg:tracking-tight anchor" id="Mengunduh-Aplikasi">
+  <h2
+    class="text-2xl lg:text-4xl font-bold lg:tracking-tight anchor"
+    id="Mengunduh-Aplikasi">
     Mengunduh Aplikasi
   </h2>
 </div>
@@ -177,35 +186,37 @@ const tutorial = [
   </ol>
 </div>
 <div class="mb-16">
-  {
-    tutorial.map((step) => (
-      <>
-        <div class="mt-16 mb-8">
-          <h2
-            class="text-2xl lg:text-4xl font-bold lg:tracking-tight anchor"
-            id={step.id2}>
-            {step.title}
-          </h2>
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+    {
+      tutorial.map((step) => (
+        <div class="grid grid-cols-1">
+          <div class="pt-8 mb-8 h-16">
+            <h2
+              class="text-2xl lg:text-4xl font-bold lg:tracking-tight anchor pe-4"
+              id={step.id2}>
+              {step.title}
+            </h2>
+          </div>
+          <div class="flex justify-center items-center mt-8 gap-8 lazy">
+            <iframe
+              width="720"
+              height="480"
+              src={step.video}
+              title={step.title}
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+              loading="lazy"
+            />
+          </div>
         </div>
-        <div class="flex justify-center items-center mt-8 gap-8 lazy">
-          <iframe
-            width="720"
-            height="480"
-            src={step.video}
-            title={step.title}
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen
-            loading="lazy"
-          />
-        </div>
-      </>
-    ))
-  }
+      ))
+    }
+  </div>
   <style>
     .anchor {
-      padding-top: 100pt; 
-      margin-top: -100pt
+      padding-top: 100pt;
+      margin-top: -100pt;
     }
   </style>
 </div>

@@ -16,8 +16,7 @@ const publishedTeamMembers = await getCollection("team", ({ data }) => {
     <Fragment slot="title">Tentang</Fragment>
     <Fragment slot="desc">Kenal kami lebih dekat lagi</Fragment>
   </Sectionhead>
-  <Container>
-
+  <Container class="bg-pattern-2 bg-cover bg-norepeat bg-center">
     <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-8 mb-8">
       <h2 class="font-bold text-3xl text-gray-800">
         Apa itu AccounTax?
@@ -36,12 +35,48 @@ const publishedTeamMembers = await getCollection("team", ({ data }) => {
       <p class="text-lg leading-relaxed text-slate-500">
         Pada kegiatan sosialisasi bertujuan untuk memberikan pemahaman yang mendalam kepada peserta tentang bagaimana aplikasi Accountax dapat membantu dalam mengotomatisasi proses akuntansi dan pelaporan keuangan. Kami berusaha menjelaskan secara rinci tentang fitur-fitur kunci aplikasi, seperti pengelolaan transaksi, pencatatan pembayaran, pembuatan laporan keuangan, dan pelacakan pengeluaran
       </p>
+      <div class="grid grid-cols-1 gap-4 items-center justify-center">
+        <Picture
+        class="mx-auto"
+        src="/album/sosialisasi-01.jpg"
+        alt="Google Play"
+        widths={[200, 400, 600]}
+        sizes="(max-width: 200px) 100vw, 480px"
+        loading="lazy"
+        format="avif"
+        aspectRatio="16:9"
+        />
+      </div>
       <p class="text-lg leading-relaxed text-slate-500">
         Selama acara sosialisasi, kami juga menyediakan sesi tanya jawab interaktif untuk memastikan peserta memahami dengan baik setiap aspek aplikasi Accountax. Para peserta diberi kesempatan untuk mengajukan pertanyaan, berbagi pengalaman, dan mendiskusikan tantangan yang mereka hadapi dalam mengelola keuangan perusahaan mereka.
       </p>
+      <div class="grid grid-cols-1 gap-4 items-center justify-center">
+        <Picture
+        class="mx-auto"
+        src="/album/sosialisasi-02.jpg"
+        alt="Google Play"
+        widths={[200, 400, 600]}
+        sizes="(max-width: 200px) 100vw, 480px"
+        loading="lazy"
+        format="avif"
+        aspectRatio="16:9"
+        />
+      </div>
       <p class="text-lg leading-relaxed text-slate-500">
         Selain itu, kami juga menyajikan contoh kasus dan studi kasus nyata untuk memberikan gambaran praktis tentang penggunaan aplikasi Accountax dalam situasi bisnis yang berbeda. Kami berharap dengan menyajikan contoh-contoh ini, peserta dapat melihat secara langsung bagaimana aplikasi ini dapat diterapkan dalam skenario keuangan mereka sendiri.
       </p>
+      <div class="grid grid-cols-1 gap-4 items-center justify-center">
+        <Picture
+        class="mx-auto"
+        src="/album/sosialisasi-03.jpg"
+        alt="Google Play"
+        widths={[200, 400, 600]}
+        sizes="(max-width: 200px) 100vw, 480px"
+        loading="lazy"
+        format="avif"
+        aspectRatio="16:9"
+        />
+      </div>
       <p class="text-lg leading-relaxed text-slate-500">
         Kami juga memberikan panduan praktis tentang penggunaan aplikasi Accountax, termasuk langkah-langkah instalasi, pengaturan awal, dan pemecahan masalah umum yang mungkin dihadapi oleh pengguna. Kami ingin memastikan bahwa setiap peserta merasa percaya diri dalam menggunakan aplikasi ini setelah acara sosialisasi.
       </p>

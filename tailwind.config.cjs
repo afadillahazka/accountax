@@ -22,6 +22,10 @@ module.exports = {
         sans: ["InterVariable", "Inter", ...defaultTheme.fontFamily.sans]
 
       },
+      backgroundImage: {
+        'pattern-1' : "url('src/assets/background-01.jpg')",
+        'pattern-2' : "url('src/assets/background-02.jpg')",
+      }
     },
   },
   plugins: [require("@tailwindcss/typography")],

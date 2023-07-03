@@ -1,6 +1,5 @@
 ---
 import Container from "@components/container.astro";
-import Cta from "@components/cta.astro";
 import Features from "@components/features.astro";
 import Benefit from "@components/benefit.astro";
 import Footer from "@components/footer.astro";
@@ -12,17 +11,14 @@ import BlogSnippet from "@components/blogsnippet.astro"
 ---
 
 <Layout title="">
-  <Container class="bg-white">
+  <Container class="bg-pattern-2 bg-cover bg-norepeat bg-center">
     <Hero />
-    <hr class="h-1 my-8 bg-darkblue rounded-md border-5">
-  </Container>
-  <Container class="">
     <Features />
   </Container>
   <Container class="bg-orange-2">
     <BlogSnippet />
   </Container>
-  <Container class="">
+  <Container class="bg-pattern-2 bg-cover bg-norepeat bg-center">
     <Review />
   </Container>
   
