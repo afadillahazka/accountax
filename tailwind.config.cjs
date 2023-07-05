@@ -23,9 +23,9 @@ module.exports = {
 
       },
       backgroundImage: {
-        'pattern-1' : "url('src/assets/background-01.jpg')",
-        'pattern-2' : "url('src/assets/background-02.jpg')",
-      }
+        'pattern-1' : "url('/background-01.jpg')",
+        'pattern-2' : "url('/background-02.jpg')",
+      },
     },
   },
   plugins: [require("@tailwindcss/typography")],
