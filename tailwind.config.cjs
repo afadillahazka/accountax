@@ -23,8 +23,8 @@ module.exports = {
 
       },
       backgroundImage: {
-        'pattern-1' : "url('/background-01.jpg')",
-        'pattern-2' : "url('/background-02.jpg')",
+        'pattern-1' : "url('./background-01.jpg')",
+        'pattern-2' : "url('./background-02.jpg')",
       },
     },
   },
