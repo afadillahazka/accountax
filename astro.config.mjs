@@ -7,8 +7,13 @@ import prefetch from "@astrojs/prefetch";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://dev-accountax.netlify.app/",
+  site: "https://accountax.id/",
   integrations: [tailwind(), image({
     serviceEntryPoint: "@astrojs/image/sharp"
-  }), mdx(), sitemap(), prefetch()]
+  }), 
+  mdx(), 
+  sitemap(), 
+  prefetch({
+    throttle: 3,
+  })]
 });
