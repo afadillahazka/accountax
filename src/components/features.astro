@@ -12,33 +12,21 @@ const features = [
   {
     title: "Kalkulator Pajak",
     description:
-      "Hitung PPh terutang otomatis dengan kalkulator pajak",
+      "Pelaku UMKM dapat mengetahui PPh terutang atas usahanya menggunakan kalkulator pajak",
     icon: "bx:bxs-window-alt",
-  },
-  {
-    title: "Di mana pun dan Kapan pun",
-    description:
-      "Catat penjualan dan biaya operasional di mana pun dan kapan un.",
-    icon: "bx:bxs-bot",
   },
   {
     title: "Mudah dan Cepat",
     description:
-      "Susun laporan keuangan dengan mudah dan cepat.",
+      "Pelaku UMKM dapat melakukan pencatatan penjualan dan biaya operasional dengan mudah dan cepat.",
     icon: "bx:bxs-data",
   },
   {
     title: "Di mana pun dan Kapan pun",
     description:
-      "Pantau performa bisnis dengan mudah",
+      "Pelaku UMKM dapat menyusun laporan keuangan di mana pun dan kapan pun dengan menggunakan handphone.",
     icon: "bx:bxs-bot",
-  },
-  {
-    title: "Di mana pun dan Kapan pun",
-    description:
-      "Kelola stok barang otomatis",
-    icon: "bx:bxs-bot",
-  },
+  }
 ];
 ---
 
@@ -52,16 +40,16 @@ const features = [
   </p> -->
 </div>
 
-<div class="grid grid-cols-auto md:grid-cols-2 mt-8 mb-16 gap-8">
+<div class="grid sm:grid-cols-2 md:grid-cols-2 mt-8 mb-16 gap-8">
   {
     features.map((item) => (
-      <div class="flex flex-col items-center gap-2 lg:flex-row lg:items-start lg:gap-4 ">
+      <div class="flex gap-4 items-start">
         <div class="mt-1 bg-black rounded-full  p-2 w-8 h-8 shrink-0">
           <Icon class="text-white" name={item.icon} />
         </div>
         <div>
-          <h2 class="text-center lg:text-left font-semibold text-3xl">{item.title}</h2>{" "}
-          <p class="text-center lg:text-left text-slate-500 mt-2 leading-relaxed">{item.description}</p>
+          <h2 class="font-semibold text-3xl">{item.title}</h2>{" "}
+          <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
         </div>
       </div>
     ))
