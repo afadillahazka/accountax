@@ -1,5 +1,6 @@
 ---
 import { SEO } from "astro-seo";
+import { SPA } from "astro-spa";
 import Footer from "@components/footer.astro";
 import Navbar from "@components/navbar/navbar.astro";
 import "@fontsource/inter/variable.css";
@@ -25,6 +26,7 @@ const makeTitle = title
 
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
+  <SPA />
   <head>
     <!-- Google Tag Manager -->
     <script>
