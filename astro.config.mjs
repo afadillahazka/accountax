@@ -3,17 +3,15 @@ import tailwind from "@astrojs/tailwind";
 import image from "@astrojs/image";
 import mdx from "@astrojs/mdx";
 import sitemap from "@astrojs/sitemap";
-import prefetch from "@astrojs/prefetch";
 
-// https://astro.build/config
 export default defineConfig({
-  site: "https://accountax.id/",
-  integrations: [tailwind(), image({
-    serviceEntryPoint: "@astrojs/image/sharp"
-  }), 
-  mdx(), 
-  sitemap(), 
-  prefetch({
-    throttle: 3,
-  })]
+  site: "https://dev-accountax.netlify.app/",
+  integrations: [
+    tailwind(),
+    image({
+      serviceEntryPoint: "@astrojs/image/sharp",
+    }),
+    mdx(),
+    sitemap(),
+  ],
 });
