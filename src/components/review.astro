@@ -1,42 +1,63 @@
 ---
+import { Picture } from "@astrojs/image/components";
+
 const review = [
-    {
-        name: "Adit",
-        text: "Aplikasi AccounTax sangat membantu mahasiswa dalam mempelajari dan memahami konsep akuntansi dan perpajakan. Dengan fitur-fitur yang intuitif dan mudah digunakan, mahasiswa dapat mengakses informasi penting tentang berbagai aspek akuntansi dan perpajakan secara cepat dan efisien. Aplikasi ini juga menyediakan contoh-contoh kasus dan latihan yang memungkinkan mahasiswa untuk menguji pemahaman mereka. Selain itu, fitur pencarian yang canggih memungkinkan mahasiswa menemukan informasi yang relevan dengan mudah. Secara keseluruhan, AccounTax adalah alat yang sangat berguna bagi mahasiswa untuk memperdalam pengetahuan akuntansi dan perpajakan.",
-        job: "Mahasiswa Trilogi",
-    },
-    {
-        name: "Don Joe",
-        text: "Bagi praktisi akuntansi dan perpajakan, AccounTax adalah alat yang sangat bermanfaat dalam membantu mereka memberikan layanan yang lebih baik kepada klien mereka. Aplikasi ini menyediakan akses cepat dan mudah ke berbagai informasi terkait regulasi perpajakan terbaru dan perkembangan dalam akuntansi. Fitur-fitur seperti perhitungan otomatis, alat pelaporan, dan pengingat tenggat waktu membantu praktisi dalam menyelesaikan tugas-tugas mereka dengan lebih efisien. AccounTax juga menyediakan sumber daya tambahan seperti panduan praktis dan studi kasus yang dapat membantu praktisi dalam menghadapi tantangan yang kompleks. Dengan AccounTax, praktisi dapat memberikan layanan yang lebih baik kepada klien mereka dan tetap mematuhi standar akuntansi dan perpajakan yang berlaku.",
-        job: "Praktisi Pajak",
-    },
-    {
-        name: "Ahmad Basumbul",
-        text: "AccounTax adalah aplikasi yang sangat berharga bagi pelaku UMKM dalam mengelola aspek akuntansi dan perpajakan bisnis mereka. Dengan aplikasi ini, pelaku UMKM dapat dengan mudah mengakses informasi terkini tentang peraturan perpajakan dan praktik akuntansi yang relevan dengan bisnis mereka. Fitur-fitur pelaporan yang disediakan juga mempermudah mereka dalam menyusun laporan keuangan dan melacak pendapatan serta pengeluaran bisnis. AccounTax juga menyediakan saran dan tips mengenai manajemen keuangan yang berguna bagi pemilik UMKM. Dengan aplikasi ini, pelaku UMKM dapat meningkatkan efisiensi dan kepatuhan mereka dalam hal akuntansi dan perpajakan.",
-        job: "Pelaku UMKM",
-    },
+{
+    name: "Sri Opti",
+    text: "AccounTax adalah aplikasi yang sangat direkomendasikan bagi akademisi di bidang akuntansi. Antarmuka yang intuitif membuatnya mudah digunakan dan laporan yang menarik mendukung presentasi dengan baik. Saya sangat merekomendasikan AccounTax kepada rekan dan mahasiswa dalam mengelola perpajakan dan akuntansi dengan lebih baik.",
+    job: "Dosen Akuntansi Trilogi",
+    alt:"Sri Opti",
+    src:"/reviewer_photos/sriopti.webp",
+  },  
+  {
+    name: "Aditya",
+    text: "Aplikasi AccounTax sangat membantu saya sebagai mahasiswa dalam mengelola keuangan dan tugas akademik. Antarmuka intuitif dan fitur kalkulator pajaknya sangat berguna. Artikel dan tips keuangan yang disediakan juga memberikan wawasan berharga. Saya sangat merekomendasikan AccounTax!",
+    job: "Mahasiswa Trilogi",
+    alt:"Aditya",
+    src:"/reviewer_photos/adit.webp",
+  },
+
+  {
+    name: "Ahmad Basumbul",
+    text: "Sebagai pelaku UMKM, saya sangat puas menggunakan AccounTax. Aplikasi ini membantu saya mengelola keuangan dengan mudah, memberikan laporan keuangan yang terstruktur, dan integrasi pajak yang menghemat waktu.",
+    job: "Pelaku UMKM",
+    alt:" ",
+    src:"/reviewer_photos/defaultphotos.avif",
+  },
 ];
 ---
 
 <div class="mt-8 mb-8">
-    <h2 class="text-4xl lg:text-5xl text-center font-bold lg:tracking-tight">
-        Apa Kata Mereka?
-    </h2>
+  <h2 class="text-4xl lg:text-5xl text-center font-bold lg:tracking-tight">
+    Apa Kata Mereka?
+  </h2>
 </div>
-<div class="grid sm:grid-cols-1 md:grid-cols-1 mt-4 lg:mt-8 gap-4">
-    {
-        review.map((review) => (
-            <div class="flex gap-4 reviews-start">
-                <div class="m-4">
-                    <h2 class="text-base lg:text-xl text-left italic">"{review.text}"</h2>
-                    <p class="font-bold text-lg text-slate-500 mt-2 leading-relaxed">
-                        {review.name}
-                    </p>
-                    <p class="text-slate-500 mt-0 leading-relaxed">
-                        {review.job}
-                    </p>
-                </div>
-            </div>
-        ))
-    }
+<div class="grid sm:grid-cols-1 md:grid-cols-1 mt-4 lg:mt-8 gap-4 lg:w-1/2 mx-auto">
+  {
+    review.map((review) => (
+      <div class="gap-4 reviews-center">
+        <div class="flex flex-col m-4">
+          <h2 class="text-base lg:text-xl text-center italic h-100">
+            "{review.text}"
+          </h2>
+          <div class="flex flex-col justify-center items-center mt-2">
+            <Picture
+              class="rounded-full"
+              src={review.src}
+              alt={review.alt}
+              widths={[200, 400, 600]}
+              sizes="(max-width: 200px) 100vw, 120px"
+              loading="lazy"
+              format="avif"
+              aspectRatio="1:1"
+            />
+            <p class="font-bold text-lg text-slate-500 mt-2 leading-relaxed">
+              {review.name}
+            </p>
+            <p class="text-slate-500 mt-0 leading-relaxed">{review.job}</p>
+          </div>
+        </div>
+      </div>
+    ))
+  }
 </div>
