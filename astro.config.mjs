@@ -5,7 +5,7 @@ import mdx from "@astrojs/mdx";
 import sitemap from "@astrojs/sitemap";
 
 export default defineConfig({
-  site: "https://accountax.id/",
+  site: "https://dev-accountax.netlify.app/",
   integrations: [
     tailwind(),
     image({
