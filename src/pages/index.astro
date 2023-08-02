@@ -8,9 +8,11 @@ import Logos from "@components/logos.astro";
 import Layout from "@layouts/Layout.astro";
 import Review from "@components/review.astro";
 import BlogSnippet from "@components/blogsnippet.astro"
+import Carousel from "@components/carousel.astro";
 ---
 
 <Layout title="">
+  <Carousel /> 
   <Container class="bg-pattern-2 bg-cover bg-norepeat bg-center">
     <Hero />
     <Features />
@@ -21,7 +23,4 @@ import BlogSnippet from "@components/blogsnippet.astro"
   <Container class="bg-pattern-2 bg-cover bg-norepeat bg-center">
     <Review />
   </Container>
-  
-    <!-- <Logos /> -->
-    <!-- <Cta /> -->
 </Layout>

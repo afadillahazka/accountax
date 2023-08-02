@@ -1,7 +1,10 @@
 /** @type {import('tailwindcss').Config} */
 const defaultTheme = require("tailwindcss/defaultTheme");
 module.exports = {
-  content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
+  content: [
+    "./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}",
+    "./node_modules/flowbite/**/*.js"
+  ],
   theme: {
     colors: {
       tosca: "#4cb2a9",
@@ -25,8 +28,14 @@ module.exports = {
       backgroundImage: {
         'pattern-1' : "url('/album/background-01.jpg')",
         'pattern-2' : "url('/album/background-02.jpg')",
+      },
+      height: {
+        '120' : '40rem',
+        'full-1' : '90vh'
       }
     },
   },
-  plugins: [require("@tailwindcss/typography")],
+  plugins: [
+    require("@tailwindcss/typography"),
+    require('flowbite/plugin')],
 };
