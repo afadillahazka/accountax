@@ -43,7 +43,7 @@ var latestPosts = publishedBlogEntries.slice(0, 3);
                     class="w-full rounded-md"
                   />
                   <div>
-                    <span class="text-blue-400 uppercase tracking-wider text-sm font-medium">
+                    <span class="text-black uppercase tracking-wider text-sm font-medium">
                       {blogPostEntry.data.category}
                     </span>
 
@@ -52,12 +52,12 @@ var latestPosts = publishedBlogEntries.slice(0, 3);
                     </h2>
 
                     <div class="flex gap-2 mt-3">
-                      <span class="text-gray-400">
+                      <span class="text-black">
                         {blogPostEntry.data.author}
                       </span>
-                      <span class="text-gray-400">• </span>
+                      <span class="text-black">• </span>
                       <time
-                        class="text-gray-400"
+                        class="text-black"
                         datetime={blogPostEntry.data.publishDate.toISOString()}>
                         {blogPostEntry.data.publishDate.toDateString()}
                       </time>

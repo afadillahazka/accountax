@@ -31,7 +31,13 @@ module.exports = {
       },
       height: {
         '120' : '40rem',
-        'full-1' : '90vh'
+        'full-1' : '90vh',
+        'full-2' : '85vh',
+        'full-3' : '80vh',
+        'half' : '70vh'
+      },
+      transitionDuration: {
+        '2000': '2000ms',
       }
     },
   },

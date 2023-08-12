@@ -3,79 +3,76 @@ import { Picture } from "@astrojs/image/components";
 
 const review = [
   {
-    name: "Zakiah",
+    name: "Zakiah Habsyi",
     text: "Aplikasi AccounTax ini sangat membantu startup, terutama bagi yang tidak terlalu mengerti akuntansi. Aplikasi yang berbasis Android ini memudahkan kami dalam mengakses dan menyusun laporan keuangan kapan pun dan di mana pun.",
     job: "Co-Founder UMKM Tasadai",
-    alt:"Zakiah",
-    src:"/reviewer_photos/zakiah.jpg",
-  },  
+    alt: "Zakiah",
+    src: "/reviewer_photos/zakiah.jpg",
+  },
   {
-    name: "Indri",
+    name: "Indri Damayanti Ismi",
     text: "Aplikasi AccounTax ini sangat membantu startup, terutama bagi yang tidak terlalu mengerti akuntansi. Aplikasi yang berbasis Android ini memudahkan kami dalam mengakses dan menyusun laporan keuangan kapan pun dan di mana pun.",
     job: "Co-Founder UMKM Risoles Yummy",
-    alt:"Indri",
-    src:"/reviewer_photos/indri.jpg",
-  },  
+    alt: "Indri",
+    src: "/reviewer_photos/indri.jpg",
+  },
   {
     name: "Sri Opti , SE. Ak., MM.CA., CertIPSAS",
     text: "Aplikasi AccounTax sangat bermanfaat untuk proses belajar mengajar di Prodi Akuntansi, khususnya dalam mata kuliah Praktikum Akuntansi. Hal ini memberikan pembelajaran dan pelatihan pada mahasiswa untuk menerapkan SAK EMKM. AccounTax juga bisa digunakan untuk mendukung kegiatan pengabdian kepada masyarakat baik dosen maupun mahasiswa.",
     job: "Dosen Akuntansi Trilogi",
-    alt:"Sri Opti",
-    src:"/reviewer_photos/sriopti.webp",
-  },  
+    alt: "Sri Opti",
+    src: "/reviewer_photos/sriopti.webp",
+  },
   {
     name: "Novita, SE.Ak.,M.Ak., CSRS., CA., CertIPSAS",
     text: "Aplikasi AccounTax merupakan aplikasi berbasis android yang user friendly, karena memudahkan UMKM dalam menyusun laporan keuangannya, mengetahui penjualan dan biaya operasionalnya sehingga UMKM dapat secara real time mengetahui kinerja usahanya. Selain itu, aplikasi ini juga dapat memudahkan UMKM dalam mengetahui pajak usahanya.",
     job: "Dosen Akuntansi Trilogi",
-    alt:"Novita",
-    src:"/reviewer_photos/novita.webp",
-  },  
+    alt: "Novita",
+    src: "/reviewer_photos/novita.webp",
+  },
   {
     name: "Muhammad Akmal Fadillah",
     text: "Aplikasi AccounTax mudah digunakan oleh semua kalangan karena di dalamnya sudah dilengkapi dengan fitur-fitur yang mudah dipahami, mulai dari barang dagangan hingga transaksi jual beli secara tunai maupun kredit.",
     job: "Mahasiswa Trilogi",
-    alt:"Muhammad Akmal",
-    src:"/reviewer_photos/defaultphotos.avif",
+    alt: "Muhammad Akmal",
+    src: "/reviewer_photos/akmalfadillah.jpeg",
   },
   {
-    name: "Aditya",
+    name: "Aditya Fadillah Azka",
     text: "Aplikasi AccounTax sangat membantu saya sebagai mahasiswa dalam mengelola keuangan dan tugas akademik. Antarmuka intuitif dan fitur kalkulator pajaknya sangat berguna. Artikel dan tips keuangan yang disediakan juga memberikan wawasan berharga. Saya sangat merekomendasikan AccounTax!",
     job: "Mahasiswa Trilogi",
-    alt:"Aditya",
-    src:"/reviewer_photos/adit.webp",
+    alt: "Aditya",
+    src: "/reviewer_photos/adit.webp",
   },
   {
-    name: "Nabiilah",
+    name: "Nabiilah Zimah",
     text: "Aplikasi AccounTax ini sudah menggunakan peraturan SAK EMKM yang terbaru loh",
     job: "Mahasiswa Trilogi",
-    alt:"Nabiilah",
-    src:"/reviewer_photos/nabiilah.jpg",
+    alt: "Nabiilah",
+    src: "/reviewer_photos/nabiilah.jpg",
   },
   {
     name: "Fara Fauziah",
     text: "Di dalam AccounTax terdapat kalkulator pajak yang sudah menyesuaikan dengan peraturan pajak terbaru",
     job: "Mahasiswa Trilogi",
-    alt:"Fara",
-    src:"/reviewer_photos/defaultphotos.avif",
+    alt: "Fara",
+    src: "/reviewer_photos/farafauziah.jpg",
   },
 ];
 ---
-
 <div class="mt-8 mb-8">
   <h2 class="text-4xl lg:text-5xl text-center font-bold lg:tracking-tight">
     Apa Kata Mereka?
   </h2>
 </div>
-<div class="grid sm:grid-cols-1 md:grid-cols-1 mt-4 lg:mt-8 gap-4 lg:w-1/2 mx-auto">
-  {
-    review.map((review) => (
-      <div class="gap-4 reviews-center">
-        <div class="flex flex-col m-4">
-          <h2 class="text-base lg:text-xl text-center italic h-100">
-            "{review.text}"
-          </h2>
-          <div class="flex flex-col justify-center items-center mt-2">
-            <Picture
+<div id="default-carousel" class="relative w-full" data-carousel="slide">
+  <div class="relative h-half overflow-hidden rounded-lg md:h-96">
+    {review.map((review) => (
+    <div
+      class="flex justify-center items-center hidden duration-2000 ease-in-out" 
+      data-carousel-item>
+      <div class="flex flex-col justify-center items-center gap-3">
+        <Picture
               class="rounded-full"
               src={review.src}
               alt={review.alt}
@@ -83,14 +80,17 @@ const review = [
               sizes="(max-width: 200px) 100vw, 120px"
               format="avif"
               aspectRatio="1:1"
-            />
-            <p class="font-bold text-lg text-slate-500 mt-2 leading-relaxed">
-              {review.name}
-            </p>
-            <p class="text-slate-500 mt-0 leading-relaxed">{review.job}</p>
+          />
+          <p class="text-center text-base lg:text-xl w-auto lg:w-1/2">
+            {review.text}
+          </p>
+          <div>
+            <h2 class="text-center font-bold">{review.name}</h2>
+            <h2 class="text-center">{review.job}</h2>
           </div>
-        </div>
       </div>
-    ))
-  }
+    </div>
+      ))
+      }
+  </div>
 </div>
